@@ -31,6 +31,8 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         // TODO:1 多行就是复制选择的行
         // 2 单行判断选没有选中文字 YES 复制选中的文字 NO 复制当前行
         
+        
+        
         var padding = 0
         for index in selection.start.line...selection.end.line {
             buffer.lines.insert(buffer.lines[index + padding], at: selection.start.line)
